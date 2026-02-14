@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: exams-application
+          uri: lb://EXAMS-APPLICATION
+          predicates:
+            - Path=/exams/**
+        - id: uploader-application
+          uri: lb://UPLOADER-APPLICATION
+          predicates:
+            - Path=/upload/**
+        - id: tasks-application
+          uri: lb://TASKS-APPLICATION
+          predicates:
+            - Path=/tasks/**
+        - id: profile-application
+          uri: lb://PROFILE-APPLICATION
+          predicates:
+            - Path=/profile/**
+          
