@@ -12,3 +12,8 @@ aws:
   s3:
   bucket: tutor-student-profile-bucket
   url: https://aws-upload-bucket-123456789.s3.amazonaws.com/   
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
