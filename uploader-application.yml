@@ -8,7 +8,6 @@ server:
 # secret key = IqYPffJfoZhsXB98jPlyaX5ZNFyJdKApMYMoUEeC
 aws:
   accessKey: AKIAZPB7IA3JLDLLWAUD
-  secretKey: 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
   region: us-east-1
   s3:
   bucket: tutor-student-profile-bucket
