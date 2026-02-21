@@ -10,7 +10,7 @@ spring:
           predicates:
             - Path=/exams/**
         - id: uploader-application
-          uri: lb://UPLOADER-APPLICATION
+          uri: lb://UPLOADS
           predicates:
             - Path=/upload/**
         - id: tasks-application
