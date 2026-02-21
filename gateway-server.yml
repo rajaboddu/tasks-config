@@ -18,9 +18,9 @@ spring:
           predicates:
             - Path=/tasks/**
         - id: profile-application
-          uri: lb://PROFILE-APPLICATION
+          uri: lb://PROFILE
           predicates:
-            - Path=/users/**
+            - Path=/profile/**
     discovery:
       locator:
         enabled: true
