@@ -8,19 +8,19 @@ spring:
         - id: exams-application
           uri: lb://EXAMS
           predicates:
-            - Path=/exams/**
+            - Path=/examsV1/**
         - id: uploader-application
           uri: lb://UPLOADS
           predicates:
-            - Path=/upload/**
+            - Path=/uploadsV1/**
         - id: tasks-application
           uri: lb://TASKS
           predicates:
-            - Path=/tasks/**
+            - Path=/tasksV1/**
         - id: profile-application
           uri: lb://PROFILE
           predicates:
-            - Path=/profile/**
+            - Path=/profileV1/**
     discovery:
       locator:
         enabled: true
