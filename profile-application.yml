@@ -40,3 +40,5 @@ spring:
 
 server:
   port: 9002
+  servlet: 
+      context-path=/profileV1
