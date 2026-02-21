@@ -20,7 +20,7 @@ spring:
         - id: profile-application
           uri: lb://PROFILE-APPLICATION
           predicates:
-            - Path=/profile/**
+            - Path=/users/**
     discovery:
       locator:
         enabled: true
