@@ -6,7 +6,7 @@ spring:
     gateway:
       routes:
         - id: exams-application
-          uri: http://localhost:9001
+          uri: lb://EXAMS
           predicates:
             - Path=/exams/**
         - id: uploader-application
@@ -21,4 +21,7 @@ spring:
           uri: lb://PROFILE-APPLICATION
           predicates:
             - Path=/profile/**
+    discovery:
+      locator:
+        enabled: true
           
