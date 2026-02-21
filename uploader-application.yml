@@ -3,6 +3,8 @@ spring:
     name : uploads
 server:
   port: 9007
+  servlet: 
+    context-path: /uploadsV1
 
 # access key = AKIAZPB7IA3JLDLLWAUD
 # secret key = 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
