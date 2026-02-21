@@ -14,7 +14,7 @@ spring:
           predicates:
             - Path=/upload/**
         - id: tasks-application
-          uri: lb://TASKS-APPLICATION
+          uri: lb://TASKS
           predicates:
             - Path=/tasks/**
         - id: profile-application
