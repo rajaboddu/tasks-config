@@ -21,6 +21,10 @@ spring:
           uri: lb://PROFILE
           predicates:
             - Path=/profileV1/**
+        - id: security-application
+          uri: lb://SECURITY
+          predicates:
+            - Path=/securityV1/**
     discovery:
       locator:
         enabled: true
