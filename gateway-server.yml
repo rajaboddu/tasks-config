@@ -16,7 +16,6 @@ spring:
               - OPTIONS
             allowedHeaders:
               - "*"
-            allowCredentials: true
       routes:
         - id: exams-application
           uri: lb://EXAMS
