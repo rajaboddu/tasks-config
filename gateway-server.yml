@@ -4,6 +4,23 @@ server:
 spring:
   cloud:
     gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:3000"
+              - "http://192.168.1.53:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
       routes:
         - id: exams-application
           uri: lb://EXAMS
@@ -25,7 +42,7 @@ spring:
           uri: lb://SECURITY
           predicates:
             - Path=/securityV1/**
-    discovery:
-      locator:
-        enabled: true
-          
+
+discovery:
+  locator:
+    enabled: true
