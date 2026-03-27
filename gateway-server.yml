@@ -19,6 +19,9 @@ spring:
               - OPTIONS
             allowedHeaders:
               - "*"
+            exposedHeaders:
+              - "Access-Control-Allow-Origin"
+              - "Access-Control-Allow-Credentials"
             allowCredentials: true
 
       routes:
